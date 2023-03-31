@@ -473,9 +473,14 @@ footer {
   .container-img {
     flex-wrap: wrap;
   }
+  
+     footer {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 542px) {
   .card-porto {
     height: 790px;
   }
+
 }
