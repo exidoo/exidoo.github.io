@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+:root {
+  --dark-color: #2c3333;
+  --light-color: #f9f9f9;
+  --hover-sosmed: #89b0d9;
+  --text: #fbf7f7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-color);
+}
+
+/* Navbar */
+header.header {
+  width: 100%;
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  position: fixed;
+  z-index: 999;
+  height: 50px;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--light-color);
+  font-weight: 900;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: var(--light-color);
+  font-size: 1rem;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+  font-weight: 800;
+}
+
+.nav-bar ul li a:hover {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+/* Change Header */
+.scroll-header {
+  background-color: var(--dark-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-header {
+  color: var(--dark-color);
+}
+
+.active-link {
+  position: relative;
+  color: var(--light-color);
+}
+
+.active-link::before {
+  content: '';
+  position: absolute;
+  background-color: var(--dark-color);
+  width: 100%;
+  height: 2px;
+  bottom: -0.75rem;
+  left: 0;
+}
+
+/* Akhir Navbar */
+
+/* Content */
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18rem;
+}
+
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+main .content .content-description {
+  flex: 1 1;
+}
+
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+main .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--light-color);
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: var(--dark-color);
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+  border: 3px solid var(--dark-color);
+  color: var(--dark-color);
+  background-color: transparent;
+}
+
+main .content .content-image {
+  flex: 1;
+  display: flex;
+}
+
+main .content .content-image img {
+  position: relative;
+  top: 3rem;
+  bottom: 70px;
+  min-width: 350px;
+  width: 500px;
+}
+
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: var(--dark-color);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color: var(--hover-sosmed);
+}
+/* Akhir Content */
+
+.container-skills {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 250px;
+  width: 600px;
+  flex-wrap: wrap;
+}
+
+.skills-tittle {
+  font-size: 50px;
+  color: var(--dark-color);
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 350px;
+  height: 300px;
+  box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+  border-radius: 0.9rem;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  cursor: pointer;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skill-image,
+.container-img {
+  transform: translate(0, -1.5rem);
+  transition: transform 500ms ease-in-out;
+  filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+
+.coding,
+.design,
+.writing {
+  width: 180px;
+}
+.skill-info {
+  text-align: center;
+}
+
+.card:hover .skill-image {
+  transform: translate(0rem, -2rem) rotate(5deg);
+}
+
+.skill-info h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.skill-info p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Porto */
+.container-porto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.porto-tittle {
+  font-size: 50px;
+  color: var(--dark-color);
+}
+.card-porto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem 0 2rem;
+  width: 850px;
+  height: 400px;
+  box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+  border-radius: 0.9rem;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.img-porto {
+  width: 280px;
+  cursor: pointer;
+}
+
+.button-porto {
+  border-radius: 99px;
+  font-weight: bold;
+  background-color: var(--dark-color);
+  height: 2rem;
+}
+
+.teks-button {
+  text-decoration: none;
+  color: var(--light-color);
+  text-align: center;
+}
+
+.button-porto:hover {
+  color: var(--dark-color);
+  background-color: transparent;
+}
+
+.teks-button:hover {
+  color: var(--dark-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  height: 300px;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+
+.email {
+  color: var(--light-color);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1140px) {
+  /* Navbar */
+  header.header {
+    padding: 0 50px;
+    height: 4rem;
+  }
+
+  .container-skills {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .skill {
+    flex-direction: column;
+  }
+
+  .container-porto {
+    width: 100%;
+    margin: auto;
+  }
+
+  .card-porto {
+    width: 80%;
+    height: 670px;
+    justify-content: right;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .container-img {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 762px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: var(--light-color);
+    margin: 6px 0;
+  }
+
+  .nav-bar {
+    height: 0px;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    transition: 0.3s;
+    overflow: hidden;
+  }
+
+  .nav-bar.active {
+    height: 100%;
+    z-index: 999;
+    opacity: 70%;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    z-index: 99;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+  /* Akhir Navbar */
+
+  /* Main */
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin: auto;
+  }
+
+  main .content .content-description .title {
+    font-size: 2rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content .content-image {
+    order: -1;
+  }
+  /* Akhir Main */
+
+  /* Skills */
+  .container-skills {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .skill {
+    flex-direction: column;
+  }
+  /* Akhir Skills */
+
+  /* Porto */
+  .container-porto {
+    width: 100%;
+    margin: auto;
+  }
+
+  .card-porto {
+    width: 80%;
+    height: 670px;
+    justify-content: right;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .container-img {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 542px) {
+  .card-porto {
+    height: 790px;
+  }
+}
