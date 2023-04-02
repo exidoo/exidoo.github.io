@@ -482,9 +482,7 @@ footer {
   }
 
     main aside .social-media {
-    position: relative;
-    right: 0;
-    z-index: 99;
+   display : none;
   }
   
   .skills-tittle,
