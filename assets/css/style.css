@@ -482,9 +482,8 @@ footer {
   }
 
     main aside .social-media {
-    position: fixed;
-    inset-block: 0;
-    inset-inline-end: 0;
+    position: relative;
+    right: 0;
     z-index: 99;
   }
   
